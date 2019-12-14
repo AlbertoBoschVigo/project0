@@ -1,0 +1,15 @@
+
+{% extends 'plantilla.html' %}
+{% block heading %}
+    {{ headline }}
+{% endblock heading %}
+
+{% block body %}
+<nav>
+    <ul>
+        {% for pagina in listaPaginas %}
+            <li><a href = "{{ url_for('paginaDefault', name = pagina) }}">{{ pagina }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endblock body %}
