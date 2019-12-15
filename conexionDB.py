@@ -1,25 +1,31 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-def main():
-    datos_conexion = 'postgresql://postgres:12345678@localhost/cursoWebCS50'
-    #print(datos_conexion)
-    engine = create_engine(datos_conexion)
-    #print(engine)
-    sesion = scoped_session(sessionmaker(bind=engine))
-    resultado = sesion.execute("SELECT * FROM usuarios")
-    """
-    try:
-        conexion = engine.connect()
-    except Exception as e:
-        print(e)
-        return False
-    
-    resultado = conexion.execute("select * from usuarios")
-    """
-    #print(resultado)
-    for linea in resultado:
-        print(f'{ linea.id }, {linea.usuario }, { linea.password }')
+class conectorDB():
+    def __init__(self, usuario = 'postgres', password = '12345678', servidor = 'localhost', database = 'cursoWebCS50'):
+        self.__datos_conexion = f'postgresql://{ usuario }:{ password }@{ servidor }/{ database }'
+        self.__engine = create_engine(self.__datos_conexion)
+        self.__sesion = scoped_session(sessionmaker(bind=self.__engine))
 
+    def consulta(self, query):
+        resultado = self.__sesion.execute(query).fetchall()
+        for linea in resultado:
+            print(linea)
+        return resultado
+        """
+        try:
+            conexion = engine.connect()
+        except Exception as e:
+            print(e)
+            return False
+        
+        resultado = conexion.execute("select * from usuarios")
+        
+        #print(resultado)
+        for linea in resultado:
+            print(f'{ linea.id }, {linea.usuario }, { linea.password }')
+        """
 if __name__ == '__main__':
-    main()
+   conexion = conectorDB()
+   #print(conexion.consulta("SELECT * FROM usuarios WHERE usuario = 'juan'"))
+   print(conexion.consulta("SELECT * FROM usuarios"))
