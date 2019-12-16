@@ -1,0 +1,11 @@
+{% extends 'plantilla.html' %}
+{% block heading %}
+    {{ headline }}
+{% endblock heading %}
+
+{% block body %}
+<p> Aqui tendria que poner toda la charanga</p>
+<nav>
+    <a href="{{ url_for('index') }}">Ir al inicio</a>
+</nav>
+{% endblock body %}

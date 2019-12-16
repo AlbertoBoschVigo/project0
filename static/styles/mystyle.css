@@ -5,10 +5,10 @@
 }
 @media (min-width: 800px) {
     body {
-        background-color: cadetblue;
+        background-color: #ffd369;
     }
     h1::before{
-        content: "Welcome to my webpage!";
+        content: "!";
     }
 }
 @media (max-width: 799px) {
@@ -16,7 +16,7 @@
         background-color: lightsalmon;
     }
     h1::before{
-        content: "Welcome!";
+        content: "!";
     }
 }
 .container {
@@ -24,7 +24,7 @@
     flex-wrap: wrap;
 }
 .container > div{
-    background-color: lightsteelblue;
+    background-color: #263f44;
     font-size: 20px;
     margin: 20px;
     padding: 20px;
@@ -44,8 +44,8 @@
 }
 .claseFooter {
     font-size: 10px;
-    color: coral;
+    color: #fff1cf;
 }
 h1{
-    color: red;
+    color: #015668;
 }
