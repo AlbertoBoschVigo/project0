@@ -5,8 +5,11 @@
         <title>Mi pagina web</title>
     </head>
     <body>
-        <h1>{% block heading %}{% endblock %}</h1>
+        <h1>{% block heading %}{% endblock heading %}</h1>
         {% block body %}
-        {% endblock %}
+        {% endblock body %}
+
+        {% block foot %}
+        {% endblock foot %}
     </body>
 </html>
