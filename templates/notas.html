@@ -2,18 +2,37 @@
 {% block heading %}
     {{ headline }}
 {% endblock heading %}
-
+<script type="text/javascript">
+    window.onload = function()
+        {
+            document.getElementById('input01').focus();
+        };
+</script>
 {% block body %}
-        <ul>
-            {% for nota in notas %}
-                <li>{{ nota }}</li>
-            {% endfor %}
-        </ul>
+    <div class="container">
+        <div class ="uListas">
+            <ul>
+                {% for nota in notas %}
+                    <li>{{ nota }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class ="uListas">
+            <ul>
+                {% for nota in notas %}
+                    <li>{{ nota }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="form-group" id="formulario00">
+            <form action = "{{ url_for('notas') }}" method = "post">
+            <input type = "text" id="input01" class="form-control" name = "nota" placeholder = "Introduce la nota" autofocus multiple>
+            <input type = "text" id="input02" class="form-control" name = "nota" placeholder = "Introduce la nota" autofocus multiple>
+            <button type="submit" id="boton01" class="btn btn-primary">Inserta nota</button>
+            </form>
+        </div>
+    </div>
     
-    <form action = "{{ url_for('notas') }}" method = "post">
-    <input type = "text" name = "nota" placeholder = "Introduce la nota">
-    <button>Inserta nota</button>
-    </form>
 
     <a href="{{ url_for('index') }}">Ir al inicio</a>
 {% endblock body %}

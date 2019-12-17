@@ -7,7 +7,7 @@
     body {
         background-color: #ffd369;
     }
-    h1::before{
+    h1::after{
         content: "!";
     }
 }
@@ -24,11 +24,11 @@
     flex-wrap: wrap;
 }
 .container > div{
-    background-color: #263f44;
+    /*background-color: #263f44;*/
     font-size: 20px;
     margin: 20px;
     padding: 20px;
-    width: 200px;
+    max-width: 60%;
 }
 .grid {
     background-color: green;
@@ -36,7 +36,7 @@
     padding: 20px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-columns: 200px auto auto;
+    grid-template-columns: 600px 600px;
 }
 .grid-item {
     background-color: honeydew;
@@ -46,6 +46,24 @@
     font-size: 10px;
     color: #fff1cf;
 }
-h1{
+h1, h3{
     color: #015668;
+    text-align: center;
+}
+#contenido {
+    height: 90%;
+}
+#pie{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 220px;
+    border: 2px solid rgb(218, 171, 18);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    font-size: 11px;
+}
+#formulario00{
+    max-width: 60%;
 }

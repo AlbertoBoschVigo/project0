@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/mystyle100.css') }}">
         <title>Mi pagina web</title>
     </head>
     <body>
-        <h1>{% block heading %}{% endblock heading %}</h1>
-        {% block body %}
-        {% endblock body %}
+        <div id="contenido">
+            <h1>{% block heading %}{% endblock heading %}</h1>
+            {% block body %}
+            {% endblock body %}
 
-        {% block foot %}
-        {% endblock foot %}
+        </div>
+        
+
+        <div id="pie">
+            <h3>Hecho por Alberto @2019</h3>
+            {% block foot %}
+            {% endblock foot %}
+
+        </div>
+        
     </body>
 </html>
