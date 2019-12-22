@@ -19,11 +19,11 @@
         content: "!";
     }
 }
-.container {
+.contenedor {
     display: flex;
     flex-wrap: wrap;
 }
-.container > div{
+.contenedor > div{
     /*background-color: #263f44;*/
     font-size: 20px;
     margin: 20px;
@@ -53,16 +53,16 @@ h1, h3{
 #contenido {
     height: 90%;
 }
-#pie{
+#pieDerecho{
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 220px;
+    width: 150px;
     border: 2px solid rgb(218, 171, 18);
     border-radius: 10px;
     padding: 5px;
     text-align: center;
-    font-size: 11px;
+    font-size: 9px;
 }
 #formulario00{
     max-width: 60%;

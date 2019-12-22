@@ -1,12 +1,23 @@
 {% extends 'plantilla.html' %}
-{% block heading %}
+{% block headingA %}
     {{ headline }}
-{% endblock heading %}
+{% endblock headingA %}
 
 
 {% block navegacion %}
-    <a href="{{ url_for('index') }}">Ir al inicio</a>
+    <ul>
+        {% for pagina in listaPaginas %}
+            <li><a href = "{{ url_for('contenido', name = pagina) }}">{{ pagina }}</a></li>
+        {% endfor %}
+        <li><a href="{{ url_for('index') }}">Ir al inicio</a></li>
+    </ul>
+    
 {% endblock navegacion %}
+
+{% block headingM %}
+    Recetas {{ headline }}
+{% endblock headingM %}
+
 {% block body %}
 <p> Aqui tendria que poner toda la charanga</p>
 {% endblock body %}

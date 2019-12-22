@@ -1,16 +1,22 @@
 
 {% extends 'plantilla.html' %}
-{% block heading %}
+{% block headingA %}
     {{ headline }}
-{% endblock heading %}
+{% endblock headingA %}
 
 {% block navegacion %}
     <ul>
         {% for pagina in listaPaginas %}
-            <li><a href = "{{ url_for('paginaDefault', name = pagina) }}">{{ pagina }}</a></li>
+            <li><a href = "{{ url_for('contenido', name = pagina) }}">{{ pagina }}</a></li>
         {% endfor %}
     </ul>
 {% endblock navegacion %}
+
+{% block headingM %}
+    {{ headline }}
+{% endblock headingM %}
+
 {% block body %}
+<p>Estamos muy contentos de que hayas venido a mi pagina, mola mazo.</p>
 <p> Aqui no tengo aboslutamente nada que poner, vaya movida</p>
 {% endblock body %}

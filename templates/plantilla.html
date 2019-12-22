@@ -9,23 +9,67 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <aside class=".col-sm-"></aside>
+                <aside class="col-">
                     <header>
-                        <h1>{% block heading %}{% endblock heading %}</h1>
+                        <h3>{% block headingA %}{% endblock headingA %}</h3>
                         <p><a href="http://localhost:5000">Alberto</a><br>
-                            <a href="mailto:melfir@gmail.com">melfir@gmail.com</a>
-                            <a href="https://twitter.com/home" class="pr-1"><i class="fab fa-twitter"></i></a>
+                            <a href="mailto:melfir@gmail.com">melfir@gmail.com</a><br>
+                            <a href="https://twitter.com/bertinhogago">https://twitter.com/bertinhogago</a>
                         </p>
                     </header>
-                    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside > nav" data-toggle="collapse">Menu</button>
-                    <nav class="collapse d-md-block"><hr>
+    
+                    <nav>
                         {% block navegacion %}
                         {% endblock navegacion %}
                     </nav>
+                    <!--
+                    <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Button with data-target
+                    </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                    -->
+                    <!--<p><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample" aria-expanded="true" aria-controls="multiCollapseExample">Desplegar Menu</button></p>-->
+                    <!--<div class="collapse multi-collapse" id="multiCollapseExample">-->
+                    <!--<button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside > span" data-toggle="collapse">Menu</button>-->
+                    <button aria-controls="nav" aria-expanded="false" class="btn btn-primary collapsed d-md-none" data-target="aside > span" data-toggle="collapse">Menu</button>
+
+                    <span class="collapse d-md-block">
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            A simple success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            A simple warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            A simple info alert—check it out!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            A simple light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            A simple dark alert—check it out!
+                        </div>
+                    </span>
                 </aside>
 
-                <main class=".col-xl-">
-                    <div id="contenido">
+                <main class="col-6">
+                    <h1>
+                        {% block headingM %}{% endblock headingM %}
+                    </h1>
+                    <div>
                         
                         {% block body %}
                         {% endblock body %}
@@ -33,14 +77,43 @@
                     </div>
                 
 
-                    <div id="pie">
-                        <h3>Hecho por Alberto @2019</h3>
+                    <div>
                         {% block foot %}
                         {% endblock foot %}
 
                     </div>
+                    <!--
+                    <div class="alert alert-primary" role="alert">
+                        A simple primary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        A simple secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        A simple success alert—check it out!
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        A simple danger alert—check it out!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        A simple warning alert—check it out!
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        A simple info alert—check it out!
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                        A simple light alert—check it out!
+                    </div>
+                    <div class="alert alert-dark" role="alert">
+                        A simple dark alert—check it out!
+                    </div>
+                    -->
+                    <h6 id="pieDerecho">Hecho por Alberto @2019</h6>
                 </main>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
