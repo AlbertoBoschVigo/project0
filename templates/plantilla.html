@@ -2,24 +2,45 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/mystyle100.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/mystyle.css') }}">
+        <!--script type=text/javascript src="{{url_for('static', filename='js/main.js') }}"></!--script>-->
         <title>Mi pagina web</title>
     </head>
     <body>
-        <div id="contenido">
-            <h1>{% block heading %}{% endblock heading %}</h1>
-            {% block body %}
-            {% endblock body %}
+        <div class="container-fluid">
+            <div class="row">
+                <aside class=".col-sm-"></aside>
+                    <header>
+                        <h1>{% block heading %}{% endblock heading %}</h1>
+                        <p><a href="http://localhost:5000">Alberto</a><br>
+                            <a href="mailto:melfir@gmail.com">melfir@gmail.com</a>
+                            <a href="https://twitter.com/home" class="pr-1"><i class="fab fa-twitter"></i></a>
+                        </p>
+                    </header>
+                    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside > nav" data-toggle="collapse">Menu</button>
+                    <nav class="collapse d-md-block"><hr>
+                        {% block navegacion %}
+                        {% endblock navegacion %}
+                    </nav>
+                </aside>
 
+                <main class=".col-xl-">
+                    <div id="contenido">
+                        
+                        {% block body %}
+                        {% endblock body %}
+
+                    </div>
+                
+
+                    <div id="pie">
+                        <h3>Hecho por Alberto @2019</h3>
+                        {% block foot %}
+                        {% endblock foot %}
+
+                    </div>
+                </main>
+            </div>
         </div>
-        
-
-        <div id="pie">
-            <h3>Hecho por Alberto @2019</h3>
-            {% block foot %}
-            {% endblock foot %}
-
-        </div>
-        
     </body>
 </html>

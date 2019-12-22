@@ -3,9 +3,10 @@
     {{ headline }}
 {% endblock heading %}
 
+
+{% block navegacion %}
+    <a href="{{ url_for('index') }}">Ir al inicio</a>
+{% endblock navegacion %}
 {% block body %}
 <p> Aqui tendria que poner toda la charanga</p>
-<nav>
-    <a href="{{ url_for('index') }}">Ir al inicio</a>
-</nav>
 {% endblock body %}

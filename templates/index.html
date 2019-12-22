@@ -4,12 +4,13 @@
     {{ headline }}
 {% endblock heading %}
 
-{% block body %}
-<nav>
+{% block navegacion %}
     <ul>
         {% for pagina in listaPaginas %}
             <li><a href = "{{ url_for('paginaDefault', name = pagina) }}">{{ pagina }}</a></li>
         {% endfor %}
     </ul>
-</nav>
+{% endblock navegacion %}
+{% block body %}
+<p> Aqui no tengo aboslutamente nada que poner, vaya movida</p>
 {% endblock body %}

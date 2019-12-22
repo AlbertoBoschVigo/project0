@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/mystyle.css') }}">
+        <!--script type=text/javascript src="{{url_for('static', filename='js/main.js') }}"></!--script>-->
+        <script>
+            /*
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelector('#form').onsubmit = mensaje;
+            });
+
+            function mensaje(){
+                const name = document.querySelector('#name').value;
+                alert(`Hola ${name}`)
+            }
+
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelector('button').onclick = sumando;
+            });
+            let counter = 0
+            function sumando(){
+                counter++;
+                document.querySelector('#counter').innerHTML = counter;
+
+                if (counter % 10 == 0){
+                    alert(`Counter es ${counter}!`)
+                }
+            }
+            */
+           document.addEventListener('DOMContentLoaded', function() {
+               document.querySelectorAll('.color-change').forEach(function(button) {
+                   button.onclick = function() {
+                       document.querySelector('#hello').style.color = button.dataset.color;
+                   }
+               })
+           });
+        </script>
+        <title>Mi pagina web</title>
+    </head>
+    <body>
+        <div id="contenido">
+            <h1 id="counter">0</h1>
+            <!--<button onclick="sumando()">Click Here!</button>-->
+            <button>Click here!</button>
+            <h1 id="hello">Hello</h1>
+            <button class="color-change" data-color="red">Rojo</button>
+            <button class="color-change" data-color="blue">Azul</button>
+            <button class="color-change" data-color="green">Verde</button>
+
+            <div class="form-group" id="formulario00">
+                <form id="form">
+                    <input id="name" autocomplete="off" class="form-control" autofocus placeholder="Nombre" type="text">
+                    <button type="submit" id="boton01" class="btn btn-primary">Saluda!</button>
+                </form>
+            </div>
+
+        </div>
+        
+
+        <div id="pie">
+        
+
+        </div>
+        
+    </body>
+</html>
